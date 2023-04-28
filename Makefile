@@ -1,4 +1,13 @@
-index.html: index.md top.html bottom.html style.css
-	markdown index.md > _index.html
-	cat top.html _index.html bottom.html > index.html
-	rm _index.html
+.DELETE_ON_ERROR:
+all: pub/index.html pub/style.css
+
+pub/style.css: style.css pub
+	cp style.css pub/style.css
+
+pub/index.html: index.md top.html bottom.html pub
+	cp top.html pub/index.html
+	markdown index.md >> pub/index.html
+	cat bottom.html >> pub/index.html
+
+pub:
+	mkdir pub
