@@ -3,6 +3,12 @@ body {
   background-color: #3f3f3f;
   font-family: Courier neu, monospace;
 }
+@media screen and (min-width: 600px) {
+  body {
+    max-width: 75%;
+  }
+}
+
 a:link {
   color: #f0dfaf
 }
