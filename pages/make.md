@@ -73,27 +73,22 @@ directory is clean before building. If there is a 'clean' target,
 it can be run independently, and also included as a dependency of
 the 'build' target
 
-### * Preinstalled on most systems
-Almost all Unix like systems, including Linux, BSD, and macOS,
-come with Make preinstalled, so it can be used right away without
-having to install from a package manager.
-
 ## Examples
-Let's see a quick example. This is an example Makefile for
-a project built with yarn:
+Let's see some examples. This is a Makefile for a project built
+with yarn:
 
 <pre>
 .PHONY: dev
 dev:
-	yarn dev
+&#9;yarn dev
 
 .PHONY: test
 test:
-	yarn test
+&#9;yarn test
 
 .PHONY: build
 build: test
-	yarn build
+&#9;yarn build
 </pre>
 
 Ultimately, it's not that interesting. Three targets that essentially
@@ -108,19 +103,19 @@ Here's an example for a Quarkus project built with Maven:
 <pre>
 .PHONY: dev
 dev:
-	./mvnw quarkus:dev
+&#9;./mvnw quarkus:dev
 
 .PHONY: test
 test:
-	./mvnw test
+&#9;./mvnw test
 
 .PHONY: build
 build:
-	./mvnw package -Dnative
+&#9;./mvnw package -Dnative
 
 .PHONY: docker-build
 docker-build: build
-	docker build -t my_app -f ./src/main/docker/Dockerfile.native
+&#9;docker build -t my_app -f ./src/main/docker/Dockerfile.native
 </pre>
 
 With this one, some of the other benefits become clear:
@@ -135,6 +130,11 @@ organization's ecosystem (dev, test, build) so that it feels
 less like context switching and more like running the same
 types of projects, even when using a different language
 or underlying build system.
+
+The targets from these Makefiles can be run as `make <target>`:
+<pre>
+$ make test
+</pre>
 
 Hope you found this interesting and consider using Make to
 self document the commands for developing your project!
