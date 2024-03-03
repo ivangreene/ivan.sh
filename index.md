@@ -2,40 +2,9 @@
 
 Technologist, open source enthusiast. Diverse experiences at startups large and small.
 
-### Technologies I have extensive professional experience with:
+### Articles
 
-- Java
-  - CDI
-  - Spring Framework
-  - [Quarkus](https://quarkus.io/)
-  - [jOOQ](https://www.jooq.org/)
-  - Maven
-- JavaScript
-  - React
-  - Node.js
-- Ruby
-  - Rails
-  - Active Record
-- Elasticsearch
-- SQL database management systems
-  - PostgreSQL
-  - CockroachDB
-- Graph database management systems
-  - Neo4j
-  - Cypher query language
-- Message queues
-  - Apache Kafka
-- Remote procedure call (RPC) frameworks
-  - gRPC
-  - JAX-RS generated HTTP clients
-- Serialization formats for long term data persistence and/or efficient transport
-  - Apache Avro
-  - Protocol Buffers (protobuf)
-- Various Unix/Linux systems
-  - General bash scripting and automation
-- TypeScript
-- Swagger
-- Docker
+- [Make as a general purpose task runner](./make/)
 
 ### Selected open source projects I am the original author of:
 
