@@ -10,7 +10,7 @@ Technologist, open source enthusiast. Diverse experiences at startups large and 
 
 - [are.na npm package](https://github.com/ivangreene/arena-js) - are.na API wrapper for JavaScript
 - [keymap](https://github.com/ivangreene/keymap) - remap keys in macOS from the command line
-- [java-to-yup](https://github.com/ivangreene/java-to-yup) - Convert POJOs to Yup schemas
+- [java-to-zod](https://github.com/ivangreene/java-to-zod) - Convert POJOs to Zod schemas
 - [befunge npm package](https://github.com/ivangreene/befunge) - Befunge 93 interpreter for JavaScript
 
 ### Selected open source projects I have contributed to:
