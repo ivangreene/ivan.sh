@@ -78,15 +78,14 @@ Let's see some examples. This is a Makefile for a project built
 with yarn:
 
 <pre>
-.PHONY: dev
+.PHONY: *
+
 dev:
 &#9;yarn dev
 
-.PHONY: test
 test:
 &#9;yarn test
 
-.PHONY: build
 build: test
 &#9;yarn build
 </pre>
@@ -101,19 +100,17 @@ command should always be run no matter what.
 
 Here's an example for a Quarkus project built with Maven:
 <pre>
-.PHONY: dev
+.PHONY: *
+
 dev:
 &#9;./mvnw quarkus:dev
 
-.PHONY: test
 test:
 &#9;./mvnw test
 
-.PHONY: build
 build:
 &#9;./mvnw package -Dnative
 
-.PHONY: docker-build
 docker-build: build
 &#9;docker build -t my_app -f ./src/main/docker/Dockerfile.native
 </pre>
