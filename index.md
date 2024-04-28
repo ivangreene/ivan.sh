@@ -4,7 +4,7 @@ Technologist, open source enthusiast. Diverse experiences at startups large and 
 
 ### Articles
 
-- [Make as a general purpose task runner](./make/)
+- [Make as a general purpose task runner](./make)
 
 ### Selected open source projects I am the original author of:
 
