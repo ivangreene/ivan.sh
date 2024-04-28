@@ -4,14 +4,16 @@ FILE=$1
 PAGE=$(echo $FILE | sed -e 's/\.md$//' -e 's#pages/##')
 META=$(echo $FILE | sed -e 's/\.md$/.json/')
 
+OUTDIR=pub
+OPTS=""
 if [ "$PAGE" != "index" ]; then
-    REDIRECT_DIR=pub/$PAGE
-    mkdir -p $REDIRECT_DIR
-    jinja2 redirect.html -D page=$PAGE $META --format=json > $REDIRECT_DIR/index.html
+    OPTS="-D asset_path=../"
+    OUTDIR=$OUTDIR/$PAGE
 fi
 
-OUTFILE=pub/$PAGE.html
+mkdir -p $OUTDIR
+OUTFILE=$OUTDIR/index.html
 
-jinja2 top.html $META --format=json > $OUTFILE
+jinja2 top.html $OPTS $META --format=json > $OUTFILE
 markdown $FILE >> $OUTFILE
 cat bottom.html >> $OUTFILE
