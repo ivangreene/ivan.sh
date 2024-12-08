@@ -15,5 +15,5 @@ mkdir -p $OUTDIR
 OUTFILE=$OUTDIR/index.html
 
 jinja2 top.html $OPTS $META --format=json > $OUTFILE
-pandoc --from gfm --to html $FILE >> $OUTFILE
+pandoc --preserve-tabs --from gfm --to html $FILE >> $OUTFILE
 cat bottom.html >> $OUTFILE
