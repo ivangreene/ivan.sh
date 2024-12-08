@@ -1,2 +1,2 @@
 brew "jinja2-cli"
-brew "markdown"
+brew "pandoc"
