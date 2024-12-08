@@ -1,7 +1,7 @@
 .DELETE_ON_ERROR:
 all: pages pub/style.css
 
-pub/style.css: style.css pub
+pub/style.css: style.css pub gen-highlight-css.sh highlight.theme
 	cp style.css pub/style.css
 	./gen-highlight-css.sh >> pub/style.css
 
