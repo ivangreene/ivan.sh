@@ -3,6 +3,7 @@ all: pages pub/style.css
 
 pub/style.css: style.css pub
 	cp style.css pub/style.css
+	./gen-highlight-css.sh >> pub/style.css
 
 .PHONY: pages
 pages:

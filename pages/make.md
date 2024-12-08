@@ -77,18 +77,18 @@ the 'build' target
 Let's see some examples. This is a Makefile for a project built
 with yarn:
 
-<pre>
+```makefile
 .PHONY: *
 
 dev:
-&#9;yarn dev
+	yarn dev
 
 test:
-&#9;yarn test
+	yarn test
 
 build: test
-&#9;yarn build
-</pre>
+	yarn build
+```
 
 Ultimately, it's not that interesting. Three targets that essentially
 delegate the same command to yarn. But consider the points above: it
@@ -99,21 +99,21 @@ not referencing output files that should be checked, and that the
 command should always be run no matter what.
 
 Here's an example for a Quarkus project built with Maven:
-<pre>
+```makefile
 .PHONY: *
 
 dev:
-&#9;./mvnw quarkus:dev
+	./mvnw quarkus:dev
 
 test:
-&#9;./mvnw test
+	./mvnw test
 
 build:
-&#9;./mvnw package -Dnative
+	./mvnw package -Dnative
 
 docker-build: build
-&#9;docker build -t my_app -f ./src/main/docker/Dockerfile.native
-</pre>
+	docker build -t my_app -f ./src/main/docker/Dockerfile.native
+```
 
 With this one, some of the other benefits become clear:
 Maven POM files do not have an easily discoverable set
@@ -129,9 +129,9 @@ types of projects, even when using a different language
 or underlying build system.
 
 The targets from these Makefiles can be run as `make <target>`:
-<pre>
+```bash
 $ make test
-</pre>
+```
 
 Hope you found this interesting and consider using Make to
 self document the commands for developing your project!
