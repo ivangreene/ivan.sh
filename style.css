@@ -9,6 +9,10 @@ body {
   }
 }
 
+img {
+  width: 420px;
+}
+
 a:link {
   color: #f0dfaf
 }

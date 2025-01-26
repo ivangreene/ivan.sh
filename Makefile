@@ -1,5 +1,13 @@
 .DELETE_ON_ERROR:
-all: pages pub/style.css
+all: pages biz-card-img pub/style.css
+
+.PHONY: watch
+watch:
+	nodemon -e md,css,jpeg --ignore pub --watch . --watch Makefile --exec $(MAKE)
+
+.PHONY: biz-card-img
+biz-card-img: pages
+	cp biz-cards/*.jpeg pub/biz-cards
 
 pub/style.css: style.css pub gen-highlight-css.sh highlight.theme
 	cp style.css pub/style.css
