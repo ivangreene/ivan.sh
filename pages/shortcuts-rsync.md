@@ -29,6 +29,9 @@ Recursively copy the directory of photos.
 Selecting the 'Eject' action target must be done when the drive to be ejected
 is still mounted.
 
+The steps are executed synchronously in order, so the rsync command will be
+finished before the Eject action runs.
+
 After saving, a launcher for the shortcut can be added to the dock by right clicking it:
 
 ![Right-click menu showing 'Add to dock' highlighted](../img/shortcuts-rsync-dock-add.png)
