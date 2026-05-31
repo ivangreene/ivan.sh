@@ -5,6 +5,7 @@ Technologist, open source enthusiast. Diverse experiences at startups large and 
 ### Articles
 
 - [Make as a general purpose task runner](./make/)
+- [Shortcuts.app as UI to rsync](./shortcuts-rsync/)
 
 ### Selected open source projects I am the original author of:
 
